@@ -1,0 +1,58 @@
+# OS generated files
+.DS_Store
+
+
+# build artifacts
+*ipynb_checkpoints*
+
+
+# byte-complied / optimized / dll files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# virtual environments / package managers
+*.env*
+venv/
+.python-version
+
+# data files
+*.xls*
+*.doc*
+*.csv
+*.dat
+
+
+# log files
+*.log
+*.rdb
+
+# 3rd party config and caches files
+*.mypy_cache/
+.vscode/
+.netlify/
+
+# packaging files
+build/
+*egg-info*
+pip-wheel-metadata
+dist/
+
+# testing
+.coverage
+.coverage.*
+.tox/
+
+# developping
+.ideas
+.notes
+
+# private keys
+*.pem
+*.key
+*.crt
+
+# cookiecutter
+output/
+python_boilerplate/
+cookiecutter-pypackage-env/
