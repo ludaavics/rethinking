@@ -241,6 +241,27 @@ optional = false
 python-versions = "*"
 
 [[package]]
+name = "funsor"
+version = "0.4.3"
+description = "A tensor-like library for functions and distributions"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+makefun = "*"
+multipledispatch = "*"
+numpy = ">=1.7"
+opt-einsum = ">=2.3.2"
+typing-extensions = "*"
+
+[package.extras]
+dev = ["black", "flake8", "isort (>=5.0)", "nbsphinx", "pandas", "pillow (==8.2.0)", "pytest (==4.3.1)", "pytest-xdist (==1.27.0)", "scipy", "sphinx (>=2.0)", "sphinx-gallery", "sphinx-rtd-theme", "torchvision (>=0.12.0)"]
+jax = ["numpyro (>=0.7.0)", "jax (>=0.2.13)", "jaxlib (>=0.1.65)"]
+test = ["black", "flake8", "isort (>=5.0)", "pandas", "pillow (==8.2.0)", "pyro-api (>=0.1.2)", "pytest (==4.3.1)", "pytest-xdist (==1.27.0)", "requests", "scipy", "torchvision (>=0.12.0)"]
+torch = ["pyro-ppl (>=1.8.0)", "torch (>=1.11.0)"]
+
+[[package]]
 name = "identify"
 version = "2.4.12"
 description = "File identification library for Python"
@@ -616,6 +637,14 @@ cssselect = ["cssselect (>=0.7)"]
 html5 = ["html5lib"]
 htmlsoup = ["beautifulsoup4"]
 source = ["Cython (>=0.29.7)"]
+
+[[package]]
+name = "makefun"
+version = "1.13.1"
+description = "Small library to dynamically create python functions."
+category = "main"
+optional = false
+python-versions = "*"
 
 [[package]]
 name = "markupsafe"
@@ -1340,7 +1369,7 @@ notebook = ">=4.4.1"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "f49e97dcc5594673919368288612c2845482ac1c8a50c0c99f3e7554d03eae0f"
+content-hash = "d0560c48fb6d9a7436b8e9f32b9e617777869e7a2a97a5417ab4c714cbf7ee8a"
 
 [metadata.files]
 absl-py = [
@@ -1535,6 +1564,10 @@ flatbuffers = [
     {file = "flatbuffers-2.0-py2.py3-none-any.whl", hash = "sha256:3751954f0604580d3219ae49a85fafec9d85eec599c0b96226e1bc0b48e57474"},
     {file = "flatbuffers-2.0.tar.gz", hash = "sha256:12158ab0272375eab8db2d663ae97370c33f152b27801fa6024e1d6105fd4dd2"},
 ]
+funsor = [
+    {file = "funsor-0.4.3-py3-none-any.whl", hash = "sha256:4a47e46e502b1e9c0645e0ac092eefac9929070e9cd2c6c7efb0b2325123d4c0"},
+    {file = "funsor-0.4.3.tar.gz", hash = "sha256:d6b58ab42c64de96917664424e107e9f0e8414121f1ab1d76dbe87d23ce9c68e"},
+]
 identify = [
     {file = "identify-2.4.12-py2.py3-none-any.whl", hash = "sha256:5f06b14366bd1facb88b00540a1de05b69b310cbc2654db3c7e07fa3a4339323"},
     {file = "identify-2.4.12.tar.gz", hash = "sha256:3f3244a559290e7d3deb9e9adc7b33594c1bc85a9dd82e0f1be519bf12a1ec17"},
@@ -1692,6 +1725,10 @@ lxml = [
     {file = "lxml-4.8.0-pp38-pypy38_pp73-manylinux_2_12_i686.manylinux2010_i686.manylinux_2_24_i686.whl", hash = "sha256:730766072fd5dcb219dd2b95c4c49752a54f00157f322bc6d71f7d2a31fecd79"},
     {file = "lxml-4.8.0-pp38-pypy38_pp73-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_24_x86_64.whl", hash = "sha256:8b99ec73073b37f9ebe8caf399001848fced9c08064effdbfc4da2b5a8d07b93"},
     {file = "lxml-4.8.0.tar.gz", hash = "sha256:f63f62fc60e6228a4ca9abae28228f35e1bd3ce675013d1dfb828688d50c6e23"},
+]
+makefun = [
+    {file = "makefun-1.13.1-py2.py3-none-any.whl", hash = "sha256:f10ea6e570d06e84d5488dd109cc09a3127ebbdc0696ddb7bfc234263ab2ac26"},
+    {file = "makefun-1.13.1.tar.gz", hash = "sha256:985bb8b670ffbbb95d2a8aa996d318e6e9a3f26fc6f3ef2da93ebdf8f9c616bf"},
 ]
 markupsafe = [
     {file = "MarkupSafe-2.1.1-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:86b1f75c4e7c2ac2ccdaec2b9022845dbb81880ca318bb7a0a01fbf7813e3812"},
