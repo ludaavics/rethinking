@@ -7,6 +7,7 @@ BUILDDIR      = docs
 
 
 docs:
+	@jupytext --to notebook notebooks/*.md
 	@$(SPHINXBUILD) -M clean "$(SOURCEDIR)" "$(BUILDDIR)"
 	@$(SPHINXBUILD) -anE -b html "$(SOURCEDIR)" "$(BUILDDIR)"
 	@touch "$(BUILDDIR)"/.nojekyll
