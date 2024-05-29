@@ -6,11 +6,11 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.3'
-      jupytext_version: 1.14.1
+      jupytext_version: 1.16.2
   kernelspec:
-    display_name: statistical-rethinking
+    display_name: Python 3 (ipykernel)
     language: python
-    name: statistical-rethinking
+    name: python3
 ---
 
 # Chapter 3: Sampling the Imaginary
@@ -19,8 +19,8 @@ jupyter:
 import random
 from typing import Sequence
 
-import arviz as az
 import jax
+import arviz as az
 import jax.numpy as jnp
 import numpyro
 import numpyro.distributions as dist

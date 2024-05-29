@@ -6,11 +6,11 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.3'
-      jupytext_version: 1.14.1
+      jupytext_version: 1.16.2
   kernelspec:
-    display_name: statistical-rethinking
+    display_name: Python 3 (ipykernel)
     language: python
-    name: statistical-rethinking
+    name: python3
 ---
 
 # Chapter 2: Small Worlds And Large Worlds
