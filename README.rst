@@ -1,3 +1,5 @@
+:orphan:
+
 ######################
 Statistial Rethinking
 ######################
@@ -11,3 +13,8 @@ Statistial Rethinking
    :target: https://github.com/psf/black
 
 Code and Exercises from Statistical Rethinking 2nd Edition.
+
+References:
+
+- https://fehiepsi.github.io/rethinking-numpyro/
+- https://github.com/pymc-devs/pymc-resources/tree/main

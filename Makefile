@@ -7,9 +7,9 @@ BUILDDIR      = docs
 
 
 docs:
-	@jupytext --to notebook notebooks/*.md
+	@jupytext --update --to notebook notebooks/*.md
 	@$(SPHINXBUILD) -M clean "$(SOURCEDIR)" "$(BUILDDIR)"
-	@$(SPHINXBUILD) -anE -b html "$(SOURCEDIR)" "$(BUILDDIR)"
+	@$(SPHINXBUILD) -nE -j auto -b html "$(SOURCEDIR)" "$(BUILDDIR)"
 	@touch "$(BUILDDIR)"/.nojekyll
 
 docs-clean:

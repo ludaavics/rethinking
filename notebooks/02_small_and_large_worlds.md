@@ -72,7 +72,7 @@ prior = jnp.full(grid_size, 1)
 ```python
 def calculate_grid_approximation_posterior_numpyro(
     n_trials: int,
-    n_sucesses: int,
+    n_successes: int,
     prior: Sequence[float],
     grid_size: int,
 ):
@@ -94,12 +94,12 @@ posterior_numpyro
 ```python
 def calculate_grid_approximation_posterior_pymc(
     n_trials: int,
-    n_sucesses: int,
+    n_successes: int,
     prior: Sequence[float],
     grid_size: int,
 ):
     grid = jnp.linspace(0, 1, grid_size)
-    likelihood = stats.binom.pmf(k=n_sucesses, n=n_trials, p=grid)
+    likelihood = stats.binom.pmf(k=n_successes, n=n_trials, p=grid)
     raw_posterior = prior * likelihood
     posterior = raw_posterior / raw_posterior.sum()
     return posterior
