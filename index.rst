@@ -18,6 +18,7 @@ Code and Exercises from Statistical Rethinking 2nd Edition.
   notebooks/02_small_and_large_worlds.ipynb
   notebooks/03_sampling_the_imaginary.ipynb
   notebooks/04_geocentric_models.ipynb
+  notebooks/05_the_many_variables_and_the_spurious_waffles.ipynb
 
 References:
 
