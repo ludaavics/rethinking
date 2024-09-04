@@ -19,6 +19,7 @@ Code and Exercises from Statistical Rethinking 2nd Edition.
   notebooks/03_sampling_the_imaginary.ipynb
   notebooks/04_geocentric_models.ipynb
   notebooks/05_the_many_variables_and_the_spurious_waffles.ipynb
+  notebooks/06_the_haunted_dag_and_the_causal_terror.ipynb
 
 References:
 
