@@ -27,6 +27,7 @@ pymc = ">=5.10"
 scikit-learn = ">=1.5.1"
 sphinx = ">=7.3.7"
 sphinx-copybutton = ">=0.5.2"
+statsmodels = ">=0.14.2"
 
 [tool.poetry.dev-dependencies]
 flake8 = "^4.0.1"

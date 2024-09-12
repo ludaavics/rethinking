@@ -18,3 +18,4 @@ References:
 
 - https://fehiepsi.github.io/rethinking-numpyro/
 - https://github.com/pymc-devs/pymc-resources/tree/main
+- https://www.erikkusch.com/courses/rethinking/chapter-02/
