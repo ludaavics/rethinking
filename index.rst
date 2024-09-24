@@ -22,6 +22,7 @@ Code and Exercises from Statistical Rethinking 2nd Edition.
   notebooks/06_the_haunted_dag_and_the_causal_terror.ipynb
   notebooks/07_ulysse_s_copmpass.ipynb
   notebooks/08_conditional_manatees.ipynb
+  notebooks/09_markov_chain_monte_carlo.ipynb
 
 References:
 

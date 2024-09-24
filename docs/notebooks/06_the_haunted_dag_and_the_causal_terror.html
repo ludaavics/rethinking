@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=649a27d8" />
     <link rel="stylesheet" type="text/css" href="../_static/insipid.css?v=b2d00be7" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/nbsphinx-code-cells.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/nbsphinx-code-cells.css?v=2aa19091" />
 
     <script src="../_static/documentation_options.js?v=63867087"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
@@ -163,20 +163,10 @@
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
-<div class="output_area rendered_html docutils container">
-<script type="application/javascript" id="jupyter_black">
-(function() {
-    if (window.IPython === undefined) {
-        return
-    }
-    var msg = "WARNING: it looks like you might have loaded " +
-        "jupyter_black in a non-lab notebook with " +
-        "`is_lab=True`. Please double check, and if " +
-        "loading with `%load_ext` please review the README!"
-    console.log(msg)
-    alert(msg)
-})()
-</script></div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+WARNING:jax._src.xla_bridge:An NVIDIA GPU may be present on this machine, but a CUDA-enabled jaxlib is not installed. Falling back to cpu.
+</pre></div></div>
 </div>
 <section id="Code">
 <h2>Code<a class="headerlink" href="#Code" title="Link to this heading">¶</a></h2>
@@ -389,7 +379,7 @@ Array([[ 1.       , -0.8268292],
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-100%|██| 2500/2500 [00:01&lt;00:00, 1519.33it/s, init loss: 1301.4200, avg. loss [2376-2500]: 107.0828]
+100%|█████████████████████████████████████████████████████████████████████████████████| 2500/2500 [00:00&lt;00:00, 2776.93it/s, init loss: 1301.4200, avg. loss [2376-2500]: 107.0828]
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -533,7 +523,7 @@ array([&lt;Axes: title={&#39;center&#39;: &#39;89.0% HDI&#39;}&gt;], dtype=objec
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-100%|█| 2500/2500 [00:01&lt;00:00, 1851.11it/s, init loss: 83369.6406, avg. loss [2376-2500]: 101.1503]
+100%|████████████████████████████████████████████████████████████████████████████████| 2500/2500 [00:00&lt;00:00, 2621.03it/s, init loss: 83369.6406, avg. loss [2376-2500]: 101.1503]
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -744,7 +734,7 @@ array([&lt;Axes: title={&#39;center&#39;: &#39;89.0% HDI&#39;}&gt;], dtype=objec
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-100%|███| 2500/2500 [00:01&lt;00:00, 1632.22it/s, init loss: 1344.7629, avg. loss [2376-2500]: 20.5433]
+100%|██████████████████████████████████████████████████████████████████████████████████| 2500/2500 [00:01&lt;00:00, 2469.43it/s, init loss: 1344.7629, avg. loss [2376-2500]: 20.5433]
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
@@ -765,7 +755,7 @@ array([&lt;Axes: title={&#39;center&#39;: &#39;89.0% HDI&#39;}&gt;], dtype=objec
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-100%|███| 2500/2500 [00:01&lt;00:00, 1282.73it/s, init loss: 1729.8108, avg. loss [2376-2500]: 15.8173]
+100%|██████████████████████████████████████████████████████████████████████████████████| 2500/2500 [00:00&lt;00:00, 2915.03it/s, init loss: 1729.8108, avg. loss [2376-2500]: 15.8173]
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -824,7 +814,7 @@ array([&lt;Axes: title={&#39;center&#39;: &#39;89.0% HDI&#39;}&gt;], dtype=objec
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-100%|████| 2500/2500 [00:01&lt;00:00, 1858.68it/s, init loss: 104.3310, avg. loss [2376-2500]: 15.9259]
+100%|███████████████████████████████████████████████████████████████████████████████████| 2500/2500 [00:00&lt;00:00, 2831.94it/s, init loss: 104.3310, avg. loss [2376-2500]: 15.9259]
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -1204,7 +1194,7 @@ dtype: float64
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-100%|███| 2500/2500 [00:01&lt;00:00, 1839.45it/s, init loss: 416.8714, avg. loss [2376-2500]: 210.4476]
+100%|██████████████████████████████████████████████████████████████████████████████████| 2500/2500 [00:00&lt;00:00, 2705.29it/s, init loss: 416.8714, avg. loss [2376-2500]: 207.0698]
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -1214,8 +1204,8 @@ dtype: float64
 <div class="highlight"><pre>
 
                 mean       std    median      5.5%     94.5%     n_eff     r_hat
-         p      1.56      0.08      1.56      1.44      1.69   2601.22      1.00
-     sigma      3.07      0.69      3.00      1.98      4.04   2667.19      1.00
+         p      1.38      0.02      1.38      1.35      1.41   2600.66      1.00
+     sigma      1.89      0.13      1.88      1.68      2.08   2478.34      1.00
 
 </pre></div></div>
 </div>
@@ -1266,8 +1256,8 @@ dtype: float64
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-100%|██| 5000/5000 [00:02&lt;00:00, 2082.73it/s, init loss: 3406.6060, avg. loss [4751-5000]: 254.3081]
-/var/folders/5v/1yw9884d7w796fx5h09kp4l00000gn/T/ipykernel_10869/627194800.py:25: UserWarning: Hessian of log posterior at the MAP point is singular. Posterior samples from AutoLaplaceApproxmiation will be constant (equal to the MAP point). Please consider using an AutoNormal guide.
+100%|█████████████████████████████████████████████████████████████████████████████████| 5000/5000 [00:01&lt;00:00, 3405.18it/s, init loss: 3406.6060, avg. loss [4751-5000]: 254.3081]
+/tmp/ipykernel_37448/627194800.py:25: UserWarning: Hessian of log posterior at the MAP point is singular. Posterior samples from AutoLaplaceApproxmiation will be constant (equal to the MAP point). Please consider using an AutoNormal guide.
   posterior_samples_6_7 = guide_6_7.sample_posterior(
 </pre></div></div>
 </div>
@@ -1328,7 +1318,7 @@ dtype: float64
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-100%|█| 5000/5000 [00:02&lt;00:00, 2065.61it/s, init loss: 22475.3945, avg. loss [4751-5000]: 313.0960]
+100%|████████████████████████████████████████████████████████████████████████████████| 5000/5000 [00:01&lt;00:00, 3212.20it/s, init loss: 22475.3945, avg. loss [4751-5000]: 238.8977]
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -1340,7 +1330,7 @@ dtype: float64
                       mean       std    median      5.5%     94.5%     n_eff     r_hat
            alpha      1.33      0.03      1.33      1.29      1.37   2458.84      1.00
   beta_treatment      0.09      0.04      0.09      0.04      0.15   2469.34      1.00
-           sigma      1.82      0.13      1.81      1.62      2.02   2430.96      1.00
+           sigma      1.82      0.13      1.81      1.62      2.02   2431.02      1.00
 
 </pre></div></div>
 </div>
@@ -1527,7 +1517,7 @@ H1 _||_ T | F
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-100%|█| 10000/10000 [00:04&lt;00:00, 2340.19it/s, init loss: 61067.2812, avg. loss [9501-10000]: 3834.5
+100%|████████████████████████████████████████████████████████████████████████████| 10000/10000 [00:02&lt;00:00, 4225.15it/s, init loss: 61067.2812, avg. loss [9501-10000]: 4055.4406]
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -1537,10 +1527,10 @@ H1 _||_ T | F
 <div class="highlight"><pre>
 
                       mean       std    median      5.5%     94.5%     n_eff     r_hat
-           alpha      0.45      0.16      0.43      0.21      0.66   2168.93      1.00
-     beta_fungus      1.17      0.35      1.17      0.60      1.72   2225.14      1.00
-  beta_treatment      1.13      0.22      1.13      0.75      1.46   2239.30      1.00
-           sigma      9.13      1.91      9.00      6.27     12.07   2223.28      1.00
+           alpha      0.21      0.05      0.21      0.14      0.29   2188.18      1.00
+     beta_fungus      1.74      0.45      1.74      0.97      2.40   2382.82      1.00
+  beta_treatment      1.70      0.31      1.69      1.23      2.21   2372.74      1.00
+           sigma     12.77      3.06     12.36      7.96     17.01   2482.27      1.00
 
 </pre></div></div>
 </div>
@@ -1573,20 +1563,29 @@ H1 _||_ T | F
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-100%|█| 10000/10000 [00:04&lt;00:00, 2409.76it/s, init loss: 284918.6875, avg. loss [9501-10000]: 3238.
+100%|███████████████████████████████████████████████████████████████████████████| 10000/10000 [00:02&lt;00:00, 4248.77it/s, init loss: 284918.6875, avg. loss [9501-10000]: 2302.8574]
 </pre></div></div>
 </div>
-<div class="nboutput nblast docutils container">
+<div class="nboutput docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 
                       mean       std    median      5.5%     94.5%     n_eff     r_hat
-           alpha      1.44      0.07      1.44      1.34      1.55   2581.79      1.00
-  beta_treatment      0.08      0.08      0.08     -0.05      0.21   2211.51      1.00
-           sigma      4.54      0.85      4.45      3.18      5.83   2488.87      1.00
+           alpha      1.61      0.00      1.61      1.61      1.61      0.50      1.00
+  beta_treatment      0.04      0.00      0.04      0.04      0.04       nan       nan
+           sigma      2.32      0.00      2.32      2.32      2.32      0.50      1.00
 
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/tmp/ipykernel_37448/1862449086.py:10: UserWarning: Hessian of log posterior at the MAP point is singular. Posterior samples from AutoLaplaceApproxmiation will be constant (equal to the MAP point). Please consider using an AutoNormal guide.
+  posterior_samples_6_8 = guide_6_8.sample_posterior(
 </pre></div></div>
 </div>
 </section>
@@ -1763,7 +1762,7 @@ H1 _||_ T | F
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-100%|█| 5000/5000 [00:02&lt;00:00, 2066.05it/s, init loss: 15155.9014, avg. loss [4751-5000]: 1384.1205
+100%|████████████████████████████████████████████████████████████████████████████████| 5000/5000 [00:05&lt;00:00, 918.77it/s, init loss: 15155.9014, avg. loss [4751-5000]: 1384.1205]
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -1821,7 +1820,7 @@ H1 _||_ T | F
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-100%|█| 5000/5000 [00:02&lt;00:00, 1818.72it/s, init loss: 39994.7852, avg. loss [4751-5000]: 1551.8597
+100%|███████████████████████████████████████████████████████████████████████████████| 5000/5000 [00:01&lt;00:00, 3389.24it/s, init loss: 39994.7852, avg. loss [4751-5000]: 1551.8597]
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -1978,7 +1977,7 @@ H1 _||_ T | F
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-100%|██| 2500/2500 [00:01&lt;00:00, 1478.14it/s, init loss: 2329.9583, avg. loss [2376-2500]: 350.2090]
+100%|█████████████████████████████████████████████████████████████████████████████████| 2500/2500 [00:00&lt;00:00, 2513.25it/s, init loss: 2329.9583, avg. loss [2376-2500]: 350.2090]
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -2034,7 +2033,7 @@ H1 _||_ T | F
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-100%|█| 5000/5000 [00:02&lt;00:00, 2009.49it/s, init loss: 48703.4961, avg. loss [4751-5000]: 294.4601]
+100%|████████████████████████████████████████████████████████████████████████████████| 5000/5000 [00:01&lt;00:00, 3323.18it/s, init loss: 48703.4961, avg. loss [4751-5000]: 294.4601]
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -2157,14 +2156,14 @@ H1 _||_ T | F
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 {&#39;S&#39;}
-{&#39;M&#39;, &#39;A&#39;}
+{&#39;A&#39;, &#39;M&#39;}
 </pre></div></div>
 </div>
 </section>
 <section id="Code-6.31">
 <h3>Code 6.31<a class="headerlink" href="#Code-6.31" title="Link to this heading">¶</a></h3>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">conditional_independencies</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
@@ -2208,8 +2207,8 @@ M _||_ W | S
 <h2>Hard<a class="headerlink" href="#Hard" title="Link to this heading">¶</a></h2>
 <section id="6H1">
 <h3>6H1<a class="headerlink" href="#6H1" title="Link to this heading">¶</a></h3>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dag</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">()</span>
@@ -2227,9 +2226,16 @@ M _||_ W | S
 </pre></div>
 </div>
 </div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/notebooks_06_the_haunted_dag_and_the_causal_terror_68_0.png" src="../_images/notebooks_06_the_haunted_dag_and_the_causal_terror_68_0.png" />
+</div>
+</div>
 <p>There are three backdoor paths from W to D, which are all open and we can all close by conditionning on S.</p>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../data/WaffleDivorce.csv&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;;&quot;</span><span class="p">)</span>
@@ -2259,8 +2265,149 @@ M _||_ W | S
 </pre></div>
 </div>
 </div>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Location</th>
+      <th>Loc</th>
+      <th>Population</th>
+      <th>MedianAgeMarriage</th>
+      <th>Marriage</th>
+      <th>Marriage SE</th>
+      <th>Divorce</th>
+      <th>Divorce SE</th>
+      <th>WaffleHouses</th>
+      <th>South</th>
+      <th>Slaves1860</th>
+      <th>Population1860</th>
+      <th>PropSlaves1860</th>
+      <th>W</th>
+      <th>S</th>
+      <th>D</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Alabama</td>
+      <td>AL</td>
+      <td>4.78</td>
+      <td>25.3</td>
+      <td>20.2</td>
+      <td>1.27</td>
+      <td>12.7</td>
+      <td>0.79</td>
+      <td>128</td>
+      <td>1</td>
+      <td>435080</td>
+      <td>964201</td>
+      <td>0.45</td>
+      <td>1.454029</td>
+      <td>1</td>
+      <td>1.654205</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Alaska</td>
+      <td>AK</td>
+      <td>0.71</td>
+      <td>25.2</td>
+      <td>26.0</td>
+      <td>2.93</td>
+      <td>12.5</td>
+      <td>2.05</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>-0.491567</td>
+      <td>0</td>
+      <td>1.544364</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Arizona</td>
+      <td>AZ</td>
+      <td>6.33</td>
+      <td>25.8</td>
+      <td>20.3</td>
+      <td>0.98</td>
+      <td>10.8</td>
+      <td>0.74</td>
+      <td>18</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>-0.217968</td>
+      <td>0</td>
+      <td>0.610716</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Arkansas</td>
+      <td>AR</td>
+      <td>2.92</td>
+      <td>24.3</td>
+      <td>26.4</td>
+      <td>1.70</td>
+      <td>13.5</td>
+      <td>1.22</td>
+      <td>41</td>
+      <td>1</td>
+      <td>111115</td>
+      <td>435450</td>
+      <td>0.26</td>
+      <td>0.131632</td>
+      <td>1</td>
+      <td>2.093569</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>California</td>
+      <td>CA</td>
+      <td>37.25</td>
+      <td>26.8</td>
+      <td>19.1</td>
+      <td>0.39</td>
+      <td>8.0</td>
+      <td>0.24</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>379994</td>
+      <td>0.00</td>
+      <td>-0.491567</td>
+      <td>0</td>
+      <td>-0.927058</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">model_6h1</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="n">W</span><span class="p">,</span> <span class="n">D</span><span class="p">):</span>
@@ -2286,19 +2433,41 @@ M _||_ W | S
 </pre></div>
 </div>
 </div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+100%|███████████████████████████████████████████████████████████████████████████████████| 5000/5000 [00:01&lt;00:00, 3491.22it/s, init loss: 163.6714, avg. loss [4751-5000]: 68.2101]
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+
+                mean       std    median      5.0%     95.0%     n_eff     r_hat
+         a     -0.07      0.13     -0.07     -0.28      0.15   2378.59      1.00
+       b_S      0.23      0.18      0.23     -0.05      0.54   2334.84      1.00
+       b_W      0.05      0.08      0.05     -0.07      0.19   2436.95      1.00
+     sigma      0.92      0.09      0.92      0.77      1.08   2509.58      1.00
+
+</pre></div></div>
+</div>
 </section>
 <section id="6H2">
 <h3>6H2<a class="headerlink" href="#6H2" title="Link to this heading">¶</a></h3>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;A&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">scale</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;MedianAgeMarriage&quot;</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># A _||_ W | S</span>
@@ -2326,16 +2495,39 @@ M _||_ W | S
 </pre></div>
 </div>
 </div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+100%|███████████████████████████████████████████████████████████████████████████████████| 5000/5000 [00:01&lt;00:00, 3236.52it/s, init loss: 160.2641, avg. loss [4751-5000]: 69.3847]
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+
+                mean       std    median      5.0%     95.0%     n_eff     r_hat
+         a      0.01      0.14      0.01     -0.22      0.24   2378.59      1.00
+       b_S     -0.13      0.18     -0.13     -0.41      0.18   2336.82      1.00
+       b_W     -0.04      0.08     -0.05     -0.17      0.10   2435.81      1.00
+     sigma      1.00      0.10      0.99      0.83      1.17   2521.87      1.00
+
+Given b_W, A appears to be independant from W conditionned on S
+</pre></div></div>
+</div>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;M&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">scale</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Marriage&quot;</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[42]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># D _||_ S | A, M, W</span>
@@ -2371,14 +2563,47 @@ M _||_ W | S
 </pre></div>
 </div>
 </div>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+100%|███████████████████████████████████████████████████████████████████████████████████| 5000/5000 [00:01&lt;00:00, 3385.27it/s, init loss: 190.0780, avg. loss [4751-5000]: 59.3637]
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+
+                mean       std    median      5.0%     95.0%     n_eff     r_hat
+         a     -0.07      0.11     -0.07     -0.26      0.10   2172.97      1.00
+       b_A     -0.37      0.12     -0.37     -0.57     -0.17   2493.01      1.00
+       b_M      0.03      0.12      0.03     -0.17      0.21   2405.22      1.00
+       b_S      0.20      0.17      0.20     -0.08      0.48   2160.61      1.00
+       b_W      0.10      0.10      0.10     -0.05      0.26   2512.69      1.00
+     sigma      0.76      0.08      0.75      0.63      0.88   2237.61      1.00
+
+Given b_S, D appears to be independant from S conditionned on A, M and W
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[43]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># M _||_ W | S</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;As seen on 2h1, not enough evidence to reject the DAG.&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+As seen on 2h1, not enough evidence to reject the DAG.
+</pre></div></div>
 </div>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
@@ -2396,7 +2621,7 @@ M _||_ W | S
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
 
           <div class="sidebar-resize-handle"></div>
@@ -2410,6 +2635,7 @@ M _||_ W | S
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Chapter 6: The Haunted DAG &amp; The Causal Terror</a></li>
 <li class="toctree-l1"><a class="reference internal" href="07_ulysse_s_copmpass.html">Chapter 7: Ulysse’s Compass</a></li>
 <li class="toctree-l1"><a class="reference internal" href="08_conditional_manatees.html">Chapter 8: Conditional Manatees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_markov_chain_monte_carlo.html">Chapter 9: Markov Chain Monte Carlo</a></li>
 </ul>
 
 <div><hr class="docutils"></div>
@@ -2449,7 +2675,7 @@ M _||_ W | S
 
     <footer role="contentinfo">
       &#169; Copyright 2022, Ludovic Tiako.
-      Created using <a class="reference external" href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+      Created using <a class="reference external" href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
       <a class="reference external" href="https://insipid-sphinx-theme.readthedocs.io/">Insipid Theme</a>.
     </footer>
   </body>

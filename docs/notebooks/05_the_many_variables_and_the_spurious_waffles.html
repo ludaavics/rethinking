@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=649a27d8" />
     <link rel="stylesheet" type="text/css" href="../_static/insipid.css?v=b2d00be7" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/nbsphinx-code-cells.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/nbsphinx-code-cells.css?v=2aa19091" />
 
     <script src="../_static/documentation_options.js?v=63867087"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
@@ -129,7 +129,7 @@
             
 <section id="Chapter-5:-The-Many-Variables-And-The-Spurious-Waffles">
 <h1>Chapter 5: The Many Variables And The Spurious Waffles<a class="headerlink" href="#Chapter-5:-The-Many-Variables-And-The-Spurious-Waffles" title="Link to this heading">¶</a></h1>
-<div class="nbinput docutils container">
+<div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
@@ -137,25 +137,7 @@
 </pre></div>
 </div>
 </div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area rendered_html docutils container">
-<script type="application/javascript" id="jupyter_black">
-(function() {
-    if (window.IPython === undefined) {
-        return
-    }
-    var msg = "WARNING: it looks like you might have loaded " +
-        "jupyter_black in a non-lab notebook with " +
-        "`is_lab=True`. Please double check, and if " +
-        "loading with `%load_ext` please review the README!"
-    console.log(msg)
-    alert(msg)
-})()
-</script></div>
-</div>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
@@ -182,6 +164,14 @@
 <span class="n">loss</span> <span class="o">=</span> <span class="n">numpyro</span><span class="o">.</span><span class="n">infer</span><span class="o">.</span><span class="n">Trace_ELBO</span><span class="p">()</span>
 </pre></div>
 </div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+WARNING:jax._src.xla_bridge:An NVIDIA GPU may be present on this machine, but a CUDA-enabled jaxlib is not installed. Falling back to cpu.
+</pre></div></div>
 </div>
 <section id="Code">
 <h2>Code<a class="headerlink" href="#Code" title="Link to this heading">¶</a></h2>
@@ -435,7 +425,7 @@
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-100%|████| 5000/5000 [00:03&lt;00:00, 1457.05it/s, init loss: 206.5594, avg. loss [4751-5000]: 60.6793]
+100%|███████████████████████████████████████████████████████████████████████████████████| 5000/5000 [00:01&lt;00:00, 2977.64it/s, init loss: 206.5594, avg. loss [4751-5000]: 60.6793]
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -501,7 +491,7 @@
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-/Users/ltiako/.pyenv/versions/3.12.3/envs/rethinking/lib/python3.12/site-packages/numpy/core/fromnumeric.py:59: FutureWarning: &#39;DataFrame.swapaxes&#39; is deprecated and will be removed in a future version. Please use &#39;DataFrame.transpose&#39; instead.
+/home/ltiako/.local/share/hatch/env/virtual/rethinking/ANFAH7h_/rethinking/lib/python3.12/site-packages/numpy/core/fromnumeric.py:59: FutureWarning: &#39;DataFrame.swapaxes&#39; is deprecated and will be removed in a future version. Please use &#39;DataFrame.transpose&#39; instead.
   return bound(*args, **kwds)
 </pre></div></div>
 </div>
@@ -511,7 +501,7 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;matplotlib.collections.PolyCollection at 0x13d38e570&gt;
+&lt;matplotlib.collections.PolyCollection at 0x73f899190ad0&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -564,7 +554,7 @@
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-100%|████| 5000/5000 [00:02&lt;00:00, 1885.65it/s, init loss: 271.3738, avg. loss [4751-5000]: 67.4975]
+100%|███████████████████████████████████████████████████████████████████████████████████| 5000/5000 [00:01&lt;00:00, 3777.74it/s, init loss: 271.3738, avg. loss [4751-5000]: 67.5074]
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -588,9 +578,9 @@
 <div class="highlight"><pre>
 
                      mean       std    median      5.5%     94.5%     n_eff     r_hat
-          alpha      0.08      0.11      0.08     -0.10      0.25  10318.78      1.00
-  beta_marriage      0.35      0.13      0.35      0.14      0.55   9789.40      1.00
-          sigma      0.93      0.09      0.93      0.78      1.08   9772.75      1.00
+          alpha      0.01      0.11      0.01     -0.17      0.18  10318.78      1.00
+  beta_marriage      0.37      0.13      0.38      0.16      0.58   9788.94      1.00
+          sigma      0.95      0.10      0.94      0.79      1.10   9776.02      1.00
 
 </pre></div></div>
 </div>
@@ -630,7 +620,7 @@
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-/Users/ltiako/.pyenv/versions/3.12.3/envs/rethinking/lib/python3.12/site-packages/numpy/core/fromnumeric.py:59: FutureWarning: &#39;DataFrame.swapaxes&#39; is deprecated and will be removed in a future version. Please use &#39;DataFrame.transpose&#39; instead.
+/home/ltiako/.local/share/hatch/env/virtual/rethinking/ANFAH7h_/rethinking/lib/python3.12/site-packages/numpy/core/fromnumeric.py:59: FutureWarning: &#39;DataFrame.swapaxes&#39; is deprecated and will be removed in a future version. Please use &#39;DataFrame.transpose&#39; instead.
   return bound(*args, **kwds)
 </pre></div></div>
 </div>
@@ -640,7 +630,7 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;matplotlib.collections.PolyCollection at 0x13c6dfc80&gt;
+&lt;matplotlib.collections.PolyCollection at 0x73f88e976060&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -829,7 +819,7 @@ D _||_ M | A
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-100%|████| 5000/5000 [00:02&lt;00:00, 1747.34it/s, init loss: 794.2787, avg. loss [4751-5000]: 60.8140]
+100%|███████████████████████████████████████████████████████████████████████████████████| 5000/5000 [00:01&lt;00:00, 3387.66it/s, init loss: 794.2787, avg. loss [4751-5000]: 60.8140]
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -933,7 +923,7 @@ D _||_ M | A
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-100%|███| 5000/5000 [00:02&lt;00:00, 2211.52it/s, init loss: 1161.3422, avg. loss [4751-5000]: 53.7594]
+100%|██████████████████████████████████████████████████████████████████████████████████| 5000/5000 [00:01&lt;00:00, 3529.53it/s, init loss: 1161.3422, avg. loss [4751-5000]: 53.7594]
 </pre></div></div>
 </div>
 </section>
@@ -1067,7 +1057,7 @@ D _||_ M | A
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[&lt;matplotlib.lines.Line2D at 0x13e4d43e0&gt;]
+[&lt;matplotlib.lines.Line2D at 0x73f87c347a70&gt;]
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -1155,7 +1145,7 @@ D _||_ M | A
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-/Users/ltiako/.pyenv/versions/3.12.3/envs/rethinking/lib/python3.12/site-packages/matplotlib/text.py:1464: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+/home/ltiako/.local/share/hatch/env/virtual/rethinking/ANFAH7h_/rethinking/lib/python3.12/site-packages/matplotlib/text.py:1467: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
   y = float(self.convert_yunits(y))
 </pre></div></div>
 </div>
@@ -1346,7 +1336,7 @@ D _||_ M | A
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-100%|██| 5000/5000 [00:03&lt;00:00, 1496.35it/s, init loss: 4109.7266, avg. loss [4751-5000]: 114.6630]
+100%|█████████████████████████████████████████████████████████████████████████████████| 5000/5000 [00:01&lt;00:00, 2887.38it/s, init loss: 4109.7266, avg. loss [4751-5000]: 114.6555]
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -1379,7 +1369,7 @@ D _||_ M | A
        beta_divorce_age     -0.61      0.15     -0.61     -0.84     -0.35   9895.35      1.00
   beta_divorce_marriage     -0.06      0.15     -0.06     -0.30      0.18   9788.35      1.00
       beta_marriage_age     -0.74      0.10     -0.74     -0.91     -0.59  10182.34      1.00
-          sigma_divorce      0.80      0.08      0.79      0.66      0.92   9739.71      1.00
+          sigma_divorce      0.80      0.08      0.79      0.66      0.92   9739.72      1.00
          sigma_marriage      0.73      0.08      0.72      0.61      0.84  10270.09      1.00
 
 </pre></div></div>
@@ -2170,7 +2160,7 @@ Name: neocortex.perc, dtype: float64
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-100%|█████| 5000/5000 [00:02&lt;00:00, 1847.90it/s, init loss: 53.4755, avg. loss [4751-5000]: 27.4494]
+100%|████████████████████████████████████████████████████████████████████████████████████| 5000/5000 [00:01&lt;00:00, 3291.43it/s, init loss: 53.4755, avg. loss [4751-5000]: 27.4486]
 </pre></div></div>
 </div>
 </section>
@@ -2252,7 +2242,7 @@ Name: neocortex.perc, dtype: float64
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-100%|█████| 5000/5000 [00:02&lt;00:00, 2044.05it/s, init loss: 61.9034, avg. loss [4751-5000]: 25.2326]
+100%|████████████████████████████████████████████████████████████████████████████████████| 5000/5000 [00:01&lt;00:00, 3649.38it/s, init loss: 61.9034, avg. loss [4751-5000]: 25.2326]
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -2296,7 +2286,7 @@ Name: neocortex.perc, dtype: float64
 <section id="Code-5.36">
 <h3>Code 5.36<a class="headerlink" href="#Code-5.36" title="Link to this heading">¶</a></h3>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[46]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[45]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">dcc</span><span class="p">[</span><span class="s2">&quot;N&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span> <span class="o">-</span> <span class="mf">0.15</span><span class="p">,</span> <span class="n">dcc</span><span class="p">[</span><span class="s2">&quot;N&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">+</span> <span class="mf">0.15</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
@@ -2316,12 +2306,12 @@ Name: neocortex.perc, dtype: float64
 </div>
 </div>
 <div class="nboutput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[46]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[45]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;matplotlib.collections.PolyCollection at 0x13f814ef0&gt;
+&lt;matplotlib.collections.PolyCollection at 0x73f85fd53350&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -2335,7 +2325,7 @@ Name: neocortex.perc, dtype: float64
 <section id="Code-5.37">
 <h3>Code 5.37<a class="headerlink" href="#Code-5.37" title="Link to this heading">¶</a></h3>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[47]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[46]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">model_5_6</span><span class="p">(</span>
@@ -2379,7 +2369,7 @@ Name: neocortex.perc, dtype: float64
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-100%|███████| 1000/1000 [00:01&lt;00:00, 707.12it/s, init loss: 85.2329, avg. loss [951-1000]: 24.4157]
+100%|█████████████████████████████████████████████████████████████████████████████████████| 1000/1000 [00:00&lt;00:00, 1777.90it/s, init loss: 85.2329, avg. loss [951-1000]: 24.4157]
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -2396,7 +2386,7 @@ Name: neocortex.perc, dtype: float64
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[48]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[47]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">M</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
@@ -2417,12 +2407,12 @@ Name: neocortex.perc, dtype: float64
 </div>
 </div>
 <div class="nboutput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[48]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[47]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;matplotlib.collections.PolyCollection at 0x13f9900e0&gt;
+&lt;matplotlib.collections.PolyCollection at 0x73f85f4e2b40&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -2436,7 +2426,7 @@ Name: neocortex.perc, dtype: float64
 <section id="Code-5.38">
 <h3>Code 5.38<a class="headerlink" href="#Code-5.38" title="Link to this heading">¶</a></h3>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[49]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[48]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">model_5_7</span><span class="p">(</span>
@@ -2484,7 +2474,7 @@ Name: neocortex.perc, dtype: float64
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-100%|█████| 5000/5000 [00:03&lt;00:00, 1521.40it/s, init loss: 92.9729, avg. loss [4751-5000]: 22.1066]
+100%|████████████████████████████████████████████████████████████████████████████████████| 5000/5000 [00:01&lt;00:00, 3609.26it/s, init loss: 92.9729, avg. loss [4751-5000]: 22.1066]
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -2505,7 +2495,7 @@ Name: neocortex.perc, dtype: float64
 <section id="Code-5.39">
 <h3>Code 5.39<a class="headerlink" href="#Code-5.39" title="Link to this heading">¶</a></h3>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[50]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[49]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coeftab</span> <span class="o">=</span> <span class="p">{</span>
@@ -2540,7 +2530,7 @@ Name: neocortex.perc, dtype: float64
 <section id="Code-5.40">
 <h3>Code 5.40<a class="headerlink" href="#Code-5.40" title="Link to this heading">¶</a></h3>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[51]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[50]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">M</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
@@ -2570,12 +2560,12 @@ Name: neocortex.perc, dtype: float64
 </div>
 </div>
 <div class="nboutput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[51]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[50]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;matplotlib.collections.PolyCollection at 0x13fc14cb0&gt;
+&lt;matplotlib.collections.PolyCollection at 0x73f85c7687d0&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -2589,7 +2579,7 @@ Name: neocortex.perc, dtype: float64
 <section id="Code-5.41">
 <h3>Code 5.41<a class="headerlink" href="#Code-5.41" title="Link to this heading">¶</a></h3>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[52]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[51]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># M -&gt; K &lt;- N</span>
@@ -2604,7 +2594,7 @@ Name: neocortex.perc, dtype: float64
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[52]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[51]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -2658,7 +2648,7 @@ Name: neocortex.perc, dtype: float64
 <section id="Code-5.42">
 <h3>Code 5.42<a class="headerlink" href="#Code-5.42" title="Link to this heading">¶</a></h3>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[53]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[52]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># M -&gt; K &lt;- N</span>
@@ -2672,7 +2662,7 @@ Name: neocortex.perc, dtype: float64
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[53]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[52]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -2723,7 +2713,7 @@ Name: neocortex.perc, dtype: float64
 </div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[54]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[53]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># M -&gt; K &lt;- N</span>
@@ -2738,7 +2728,7 @@ Name: neocortex.perc, dtype: float64
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[54]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[53]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -2790,7 +2780,7 @@ Name: neocortex.perc, dtype: float64
 </div>
 <p>### Code 5.43</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[55]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[54]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dag5_7</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">()</span>
@@ -2880,7 +2870,7 @@ Markov Equivalent DAGs
 <section id="Code-5.44">
 <h3>Code 5.44<a class="headerlink" href="#Code-5.44" title="Link to this heading">¶</a></h3>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[56]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[55]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../data/Howell1.csv&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;;&quot;</span><span class="p">)</span>
@@ -2889,7 +2879,7 @@ Markov Equivalent DAGs
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[56]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[55]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -2961,7 +2951,7 @@ Markov Equivalent DAGs
 <section id="Code-5.45">
 <h3>Code 5.45<a class="headerlink" href="#Code-5.45" title="Link to this heading">¶</a></h3>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[57]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[56]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mu_female</span> <span class="o">=</span> <span class="n">dist</span><span class="o">.</span><span class="n">Normal</span><span class="p">(</span><span class="mi">178</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">jax</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">PRNGKey</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">sample_shape</span><span class="o">=</span><span class="p">(</span><span class="mi">10_000</span><span class="p">,))</span>
@@ -2990,7 +2980,7 @@ Markov Equivalent DAGs
 <section id="Code-5.46">
 <h3>Code 5.46<a class="headerlink" href="#Code-5.46" title="Link to this heading">¶</a></h3>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[58]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[57]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;sex&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span> <span class="k">if</span> <span class="n">male</span> <span class="k">else</span> <span class="mi">0</span> <span class="k">for</span> <span class="n">male</span> <span class="ow">in</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;male&quot;</span><span class="p">]]</span>
@@ -2999,7 +2989,7 @@ Markov Equivalent DAGs
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[58]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[57]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -3077,7 +3067,7 @@ Markov Equivalent DAGs
 <section id="Code-5.47">
 <h3>Code 5.47<a class="headerlink" href="#Code-5.47" title="Link to this heading">¶</a></h3>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[59]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[58]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">model_5_8</span><span class="p">(</span>
@@ -3122,7 +3112,7 @@ Markov Equivalent DAGs
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-100%|█| 5000/5000 [00:02&lt;00:00, 2218.77it/s, init loss: 5633.5122, avg. loss [4751-5000]: 2584.2413]
+100%|████████████████████████████████████████████████████████████████████████████████| 5000/5000 [00:03&lt;00:00, 1651.70it/s, init loss: 5633.5122, avg. loss [4751-5000]: 2584.2362]
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -3132,9 +3122,9 @@ Markov Equivalent DAGs
 <div class="highlight"><pre>
 
                 mean       std    median      5.5%     94.5%     n_eff     r_hat
-  alpha[0]    134.86      1.57    134.89    132.35    137.38    914.61      1.00
-  alpha[1]    142.57      1.62    142.50    140.26    145.33    994.85      1.00
-     sigma     27.44      0.83     27.45     26.19     28.78   1038.25      1.00
+  alpha[0]    134.86      1.56    134.89    132.37    137.36    914.61      1.00
+  alpha[1]    142.57      1.61    142.50    140.28    145.31    994.85      1.00
+     sigma     27.22      0.81     27.23     25.99     28.53   1038.24      1.00
 
 </pre></div></div>
 </div>
@@ -3142,7 +3132,7 @@ Markov Equivalent DAGs
 <section id="Code-5.48">
 <h3>Code 5.48<a class="headerlink" href="#Code-5.48" title="Link to this heading">¶</a></h3>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[60]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[59]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">posterior_samples_5_8</span> <span class="o">=</span> <span class="n">guide_5_8</span><span class="o">.</span><span class="n">sample_posterior</span><span class="p">(</span>
@@ -3167,10 +3157,10 @@ Markov Equivalent DAGs
 <div class="highlight"><pre>
 
                 mean       std    median      5.5%     94.5%     n_eff     r_hat
-  alpha[0]    134.86      1.57    134.89    132.35    137.38    914.61      1.00
-  alpha[1]    142.57      1.62    142.50    140.26    145.33    994.85      1.00
-   diff_fm     -7.70      2.26     -7.71    -11.10     -3.87    909.92      1.00
-     sigma     27.44      0.83     27.45     26.19     28.78   1038.25      1.00
+  alpha[0]    134.86      1.56    134.89    132.37    137.36    914.61      1.00
+  alpha[1]    142.57      1.61    142.50    140.28    145.31    994.85      1.00
+   diff_fm     -7.70      2.24     -7.71    -11.07     -3.90    909.93      1.00
+     sigma     27.22      0.81     27.23     25.99     28.53   1038.24      1.00
 
 </pre></div></div>
 </div>
@@ -3178,7 +3168,7 @@ Markov Equivalent DAGs
 <section id="Code-5.49">
 <h3>Code 5.49<a class="headerlink" href="#Code-5.49" title="Link to this heading">¶</a></h3>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[61]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[60]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../data/milk.csv&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;;&quot;</span><span class="p">)</span>
@@ -3280,7 +3270,7 @@ Markov Equivalent DAGs
 </div></div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[61]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[60]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3293,7 +3283,7 @@ array([&#39;Strepsirrhine&#39;, &#39;New World Monkey&#39;, &#39;Old World Monke
 <section id="Code-5.50">
 <h3>Code 5.50<a class="headerlink" href="#Code-5.50" title="Link to this heading">¶</a></h3>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[62]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[61]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">labels</span> <span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;clade&quot;</span><span class="p">])</span>
@@ -3303,7 +3293,7 @@ array([&#39;Strepsirrhine&#39;, &#39;New World Monkey&#39;, &#39;Old World Monke
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[62]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[61]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -3405,7 +3395,7 @@ array([&#39;Strepsirrhine&#39;, &#39;New World Monkey&#39;, &#39;Old World Monke
 <section id="Code-5.51">
 <h3>Code 5.51<a class="headerlink" href="#Code-5.51" title="Link to this heading">¶</a></h3>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[63]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[62]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;K&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">scale</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;kcal.per.g&quot;</span><span class="p">])</span>
@@ -3443,11 +3433,11 @@ array([&#39;Strepsirrhine&#39;, &#39;New World Monkey&#39;, &#39;Old World Monke
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-100%|█████| 5000/5000 [00:02&lt;00:00, 2137.70it/s, init loss: 92.6402, avg. loss [4751-5000]: 36.3026]
+100%|████████████████████████████████████████████████████████████████████████████████████| 5000/5000 [00:01&lt;00:00, 3466.89it/s, init loss: 92.6402, avg. loss [4751-5000]: 36.3026]
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[64]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[63]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">posterior_samples_5_9</span> <span class="o">=</span> <span class="n">guide_5_9</span><span class="o">.</span><span class="n">sample_posterior</span><span class="p">(</span>
@@ -3483,7 +3473,7 @@ array([&#39;Strepsirrhine&#39;, &#39;New World Monkey&#39;, &#39;Old World Monke
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[64]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[63]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -3506,7 +3496,7 @@ array([&#39;Strepsirrhine&#39;, &#39;New World Monkey&#39;, &#39;Old World Monke
 <section id="Code-5.52">
 <h3>Code 5.52<a class="headerlink" href="#Code-5.52" title="Link to this heading">¶</a></h3>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[66]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[64]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;house&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dist</span><span class="o">.</span><span class="n">Categorical</span><span class="p">(</span><span class="n">probs</span><span class="o">=</span><span class="n">jnp</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="o">/</span> <span class="mi">4</span><span class="p">)</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span>
@@ -3519,7 +3509,7 @@ array([&#39;Strepsirrhine&#39;, &#39;New World Monkey&#39;, &#39;Old World Monke
 <section id="Code-5.53">
 <h3>Code 5.53<a class="headerlink" href="#Code-5.53" title="Link to this heading">¶</a></h3>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[67]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[65]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">model_5_10</span><span class="p">(</span>
@@ -3570,7 +3560,7 @@ array([&#39;Strepsirrhine&#39;, &#39;New World Monkey&#39;, &#39;Old World Monke
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-100%|█████| 5000/5000 [00:04&lt;00:00, 1198.40it/s, init loss: 75.6186, avg. loss [4751-5000]: 36.8170]
+100%|████████████████████████████████████████████████████████████████████████████████████| 5000/5000 [00:01&lt;00:00, 3583.50it/s, init loss: 75.6186, avg. loss [4751-5000]: 36.8170]
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -3639,7 +3629,7 @@ T_i &amp; \sim N(\mu_i, \sigma) \\
 <section id="5M4">
 <h3>5M4<a class="headerlink" href="#5M4" title="Link to this heading">¶</a></h3>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[68]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[66]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -3647,7 +3637,7 @@ T_i &amp; \sim N(\mu_i, \sigma) \\
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[68]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[66]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -3758,7 +3748,7 @@ T_i &amp; \sim N(\mu_i, \sigma) \\
 </div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[69]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[67]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../data/WaffleDivorce.csv&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;;&quot;</span><span class="p">)</span>
@@ -3823,7 +3813,7 @@ T_i &amp; \sim N(\mu_i, \sigma) \\
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[69]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[67]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -3976,7 +3966,7 @@ T_i &amp; \sim N(\mu_i, \sigma) \\
 </div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[70]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[68]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">model</span><span class="p">(</span>
@@ -4022,7 +4012,7 @@ T_i &amp; \sim N(\mu_i, \sigma) \\
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-100%|████| 2500/2500 [00:01&lt;00:00, 1361.25it/s, init loss: 138.0810, avg. loss [2376-2500]: 58.2086]
+100%|███████████████████████████████████████████████████████████████████████████████████| 2500/2500 [00:00&lt;00:00, 2613.10it/s, init loss: 138.0810, avg. loss [2376-2500]: 58.2086]
 </pre></div></div>
 </div>
 posterior_samples = guide.sample_posterior(jrng, svi.params, sample_shape=(1_000,))
@@ -4036,7 +4026,7 @@ numpyro.diagnostics.print_summary(posterior_samples, prob=0.89, group_by_chain=F
 <section id="Hard">
 <h2>Hard<a class="headerlink" href="#Hard" title="Link to this heading">¶</a></h2>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[71]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[69]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../data/foxes.csv&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;;&quot;</span><span class="p">)</span>
@@ -4050,7 +4040,7 @@ numpyro.diagnostics.print_summary(posterior_samples, prob=0.89, group_by_chain=F
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[71]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[69]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -4151,7 +4141,7 @@ numpyro.diagnostics.print_summary(posterior_samples, prob=0.89, group_by_chain=F
 <section id="5H1">
 <h3>5H1<a class="headerlink" href="#5H1" title="Link to this heading">¶</a></h3>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[72]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[70]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">model_h1a</span><span class="p">(</span>
@@ -4187,11 +4177,11 @@ numpyro.diagnostics.print_summary(posterior_samples, prob=0.89, group_by_chain=F
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-100%|███| 2500/2500 [00:01&lt;00:00, 1726.98it/s, init loss: 368.0105, avg. loss [2376-2500]: 164.7589]
+100%|██████████████████████████████████████████████████████████████████████████████████| 2500/2500 [00:00&lt;00:00, 2740.59it/s, init loss: 368.0105, avg. loss [2376-2500]: 164.7181]
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[73]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[71]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">posterior_samples_h1a</span> <span class="o">=</span> <span class="n">guide_h1a</span><span class="o">.</span><span class="n">sample_posterior</span><span class="p">(</span>
@@ -4211,14 +4201,14 @@ numpyro.diagnostics.print_summary(posterior_samples, prob=0.89, group_by_chain=F
 <div class="highlight"><pre>
 
                  mean       std    median      5.5%     94.5%     n_eff     r_hat
-      alpha     -0.04      0.08     -0.03     -0.16      0.09    914.61      1.00
-  beta_area      0.02      0.09      0.01     -0.10      0.16    994.84      1.00
-      sigma      0.99      0.06      0.99      0.89      1.09   1038.25      1.00
+      alpha     -0.00      0.08     -0.00     -0.13      0.13    914.61      1.00
+  beta_area      0.02      0.09      0.01     -0.11      0.17    994.84      1.00
+      sigma      1.01      0.07      1.01      0.91      1.12   1037.34      1.00
 
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[74]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[72]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">area</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
@@ -4236,12 +4226,12 @@ numpyro.diagnostics.print_summary(posterior_samples, prob=0.89, group_by_chain=F
 </div>
 </div>
 <div class="nboutput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[74]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[72]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;matplotlib.collections.PolyCollection at 0x1418299a0&gt;
+&lt;matplotlib.collections.PolyCollection at 0x73f814b79310&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -4252,7 +4242,7 @@ numpyro.diagnostics.print_summary(posterior_samples, prob=0.89, group_by_chain=F
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[75]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[73]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">model_h1b</span><span class="p">(</span>
@@ -4290,11 +4280,11 @@ numpyro.diagnostics.print_summary(posterior_samples, prob=0.89, group_by_chain=F
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-100%|███| 2500/2500 [00:01&lt;00:00, 1706.47it/s, init loss: 402.9226, avg. loss [2376-2500]: 163.2761]
+100%|██████████████████████████████████████████████████████████████████████████████████| 2500/2500 [00:00&lt;00:00, 2891.08it/s, init loss: 402.9226, avg. loss [2376-2500]: 163.2638]
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[76]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[74]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">posterior_samples_h1b</span> <span class="o">=</span> <span class="n">guide_h1b</span><span class="o">.</span><span class="n">sample_posterior</span><span class="p">(</span>
@@ -4316,12 +4306,12 @@ numpyro.diagnostics.print_summary(posterior_samples, prob=0.89, group_by_chain=F
                        mean       std    median      5.5%     94.5%     n_eff     r_hat
             alpha     -0.01      0.08     -0.01     -0.14      0.12    914.61      1.00
   beta_group_size     -0.16      0.09     -0.16     -0.28     -0.01    994.83      1.00
-            sigma      0.99      0.06      0.98      0.89      1.09   1037.35      1.00
+            sigma      0.99      0.06      0.98      0.89      1.09   1037.33      1.00
 
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[77]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[75]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">group_size</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
@@ -4341,12 +4331,12 @@ numpyro.diagnostics.print_summary(posterior_samples, prob=0.89, group_by_chain=F
 </div>
 </div>
 <div class="nboutput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[77]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[75]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;matplotlib.collections.PolyCollection at 0x141d4b050&gt;
+&lt;matplotlib.collections.PolyCollection at 0x73f8137ca150&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -4361,7 +4351,7 @@ numpyro.diagnostics.print_summary(posterior_samples, prob=0.89, group_by_chain=F
 <section id="5H2">
 <h3>5H2<a class="headerlink" href="#5H2" title="Link to this heading">¶</a></h3>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[78]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[76]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">model_h2</span><span class="p">(</span>
@@ -4413,7 +4403,7 @@ numpyro.diagnostics.print_summary(posterior_samples, prob=0.89, group_by_chain=F
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-100%|███| 2500/2500 [00:01&lt;00:00, 1796.75it/s, init loss: 398.5841, avg. loss [2376-2500]: 159.9980]
+100%|██████████████████████████████████████████████████████████████████████████████████| 2500/2500 [00:00&lt;00:00, 2543.83it/s, init loss: 398.5841, avg. loss [2376-2500]: 159.9980]
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -4431,7 +4421,7 @@ numpyro.diagnostics.print_summary(posterior_samples, prob=0.89, group_by_chain=F
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[79]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[77]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">area</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
@@ -4488,12 +4478,12 @@ numpyro.diagnostics.print_summary(posterior_samples, prob=0.89, group_by_chain=F
 </div>
 </div>
 <div class="nboutput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[79]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[77]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;matplotlib.collections.PolyCollection at 0x141f11ee0&gt;
+&lt;matplotlib.collections.PolyCollection at 0x73f8123160f0&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -4504,7 +4494,7 @@ numpyro.diagnostics.print_summary(posterior_samples, prob=0.89, group_by_chain=F
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[80]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[78]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;S&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
@@ -4512,7 +4502,7 @@ numpyro.diagnostics.print_summary(posterior_samples, prob=0.89, group_by_chain=F
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[80]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[78]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -4558,7 +4548,7 @@ This is because A and G and strongly positively correlated, but have opposite im
 <section id="5H3">
 <h3>5H3<a class="headerlink" href="#5H3" title="Link to this heading">¶</a></h3>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[81]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[79]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">model_h3</span><span class="p">(</span>
@@ -4646,7 +4636,7 @@ This is because A and G and strongly positively correlated, but have opposite im
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-100%|███| 2500/2500 [00:01&lt;00:00, 1448.94it/s, init loss: 280.2519, avg. loss [2376-2500]: 160.5481]
+100%|██████████████████████████████████████████████████████████████████████████████████| 2500/2500 [00:00&lt;00:00, 2524.03it/s, init loss: 280.2519, avg. loss [2376-2500]: 160.5481]
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
@@ -4668,7 +4658,7 @@ This is because A and G and strongly positively correlated, but have opposite im
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-100%|███| 2500/2500 [00:02&lt;00:00, 1105.61it/s, init loss: 291.1429, avg. loss [2376-2500]: 159.4464]
+100%|██████████████████████████████████████████████████████████████████████████████████| 2500/2500 [00:00&lt;00:00, 2617.74it/s, init loss: 291.1429, avg. loss [2376-2500]: 159.4464]
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -4704,7 +4694,7 @@ This is because A and G and strongly positively correlated, but have opposite im
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
 
           <div class="sidebar-resize-handle"></div>
@@ -4718,6 +4708,7 @@ This is because A and G and strongly positively correlated, but have opposite im
 <li class="toctree-l1"><a class="reference internal" href="06_the_haunted_dag_and_the_causal_terror.html">Chapter 6: The Haunted DAG &amp; The Causal Terror</a></li>
 <li class="toctree-l1"><a class="reference internal" href="07_ulysse_s_copmpass.html">Chapter 7: Ulysse’s Compass</a></li>
 <li class="toctree-l1"><a class="reference internal" href="08_conditional_manatees.html">Chapter 8: Conditional Manatees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_markov_chain_monte_carlo.html">Chapter 9: Markov Chain Monte Carlo</a></li>
 </ul>
 
 <div><hr class="docutils"></div>
@@ -4757,7 +4748,7 @@ This is because A and G and strongly positively correlated, but have opposite im
 
     <footer role="contentinfo">
       &#169; Copyright 2022, Ludovic Tiako.
-      Created using <a class="reference external" href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+      Created using <a class="reference external" href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
       <a class="reference external" href="https://insipid-sphinx-theme.readthedocs.io/">Insipid Theme</a>.
     </footer>
   </body>
