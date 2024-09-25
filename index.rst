@@ -23,6 +23,7 @@ Code and Exercises from Statistical Rethinking 2nd Edition.
   notebooks/07_ulysse_s_copmpass.ipynb
   notebooks/08_conditional_manatees.ipynb
   notebooks/09_markov_chain_monte_carlo.ipynb
+  notebooks/10_big_entropy_and_the_generalized_linear_model.ipynb
 
 References:
 
