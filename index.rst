@@ -25,6 +25,7 @@ Code and Exercises from Statistical Rethinking 2nd Edition.
   notebooks/09_markov_chain_monte_carlo.ipynb
   notebooks/10_big_entropy_and_the_generalized_linear_model.ipynb
   notebooks/11_god_spiked_the_integers.ipynb
+  notebooks/12_monsters_and_mixtures.ipynb
 
 References:
 

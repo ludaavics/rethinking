@@ -5,9 +5,10 @@ SPHINXBUILD   ?= sphinx-build
 SOURCEDIR     = .
 BUILDDIR      = docs
 
+notebooks:
+	@jupytext --update --to notebook notebooks/*.md
 
 docs:
-	@jupytext --update --to notebook notebooks/*.md
 	@$(SPHINXBUILD) -M clean "$(SOURCEDIR)" "$(BUILDDIR)"
 	@$(SPHINXBUILD) -nE -j auto -b html "$(SOURCEDIR)" "$(BUILDDIR)"
 	@touch "$(BUILDDIR)"/.nojekyll
