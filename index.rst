@@ -26,6 +26,7 @@ Code and Exercises from Statistical Rethinking 2nd Edition.
   notebooks/10_big_entropy_and_the_generalized_linear_model.ipynb
   notebooks/11_god_spiked_the_integers.ipynb
   notebooks/12_monsters_and_mixtures.ipynb
+  notebooks/13_models_with_memory.ipynb
 
 References:
 
